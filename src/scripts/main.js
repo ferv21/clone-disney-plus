@@ -17,9 +17,6 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     })
 
-
-
-
    function exibeConteudoHeader(){
         const header = document.querySelector('.header');
         header.classList.remove('header--is-hidden');
