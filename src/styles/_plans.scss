@@ -12,6 +12,15 @@
         list-style: none;
         margin-top: 50px;
 
+        @media (max-width:768px){
+            display: block;
+        }
+
+        .botao {
+            margin-top: 24px;
+        }
+        
+
         &__item{
             max-width: 380px;
             width: 100%;
@@ -26,12 +35,18 @@
 
             img{
                 height: 83px;
+
+                @media (max-width:768px){
+                   width: 100%;
+                }
+                
             }
 
             strong{
                 margin-top: 24px;
                 display: block; 
             }
+
         }
 
     }
@@ -39,4 +54,7 @@
     p{
         text-align: center;
     }
+
+
+
 }
