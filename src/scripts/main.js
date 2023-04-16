@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', function(){
     const alturaHero = heroSection.clientHeight;
 
 
-
-
     window.addEventListener('scroll', function(){
         const posicaoAtual = window.scrollY;
 
@@ -22,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function(){
         header.classList.remove('header--is-hidden');
    }
 
-   function ocultaConteudoHeader(){
+    function ocultaConteudoHeader(){
     const header = document.querySelector('.header');
     header.classList.add('header--is-hidden');
 }
@@ -46,24 +44,23 @@ document.addEventListener('DOMContentLoaded', function(){
 
 })
 
+    function abreOuFechaFaq(question){
+        const classe = 'faq__questions__item--is-open';
+        const realQuestionFaq = question.target.parentNode; 
 
-function abreOuFechaFaq(question){
-    const classe = 'faq__questions__item--is-open';
-    const realQuestionFaq = question.target.parentNode; 
-
-    realQuestionFaq.classList.toggle(classe);
+        realQuestionFaq.classList.toggle(classe);
 }
 
-function removeBotaoAtivo(){
-    const buttons = document.querySelectorAll('[data-tab-button]');
+    function removeBotaoAtivo(){
+        const buttons = document.querySelectorAll('[data-tab-button]');
 
     for (let i = 0 ; i < buttons.length; i++) {
         buttons[i].classList.remove('shows__tabs__button--is-active');
     }
 }
 
-function escondeTodasAbas(){
-    const tabsContainer = document.querySelectorAll('[data-tab-id]');
+    function escondeTodasAbas(){
+        const tabsContainer = document.querySelectorAll('[data-tab-id]');
 
     for (let i = 0 ; i < tabsContainer.length; i++){
         tabsContainer[i].classList.remove('shows__list--is-active');
